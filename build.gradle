@@ -53,7 +53,7 @@ dependencies {
     testCompile group: 'org.mockito', name: 'mockito-core', version: mockitoVersion
     testCompile group: 'xerces', name: 'xercesImpl', version: xercesVersion
 
-    buildToolsConfig 'edu.amherst.acdc:acrepo-build-tools:0.1.0'
+    buildToolsConfig 'edu.amherst.acdc:acrepo-build-tools:0.2.0'
 }
 
 repositories {

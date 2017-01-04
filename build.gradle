@@ -36,7 +36,6 @@ ext {
     xercesVersion = '2.11.0'
 
     /* OSGi */
-    defaultOsgiImports = '*'
     projectOsgiVersion = project.version.replaceAll("-SNAPSHOT", ".SNAPSHOT")
 }
 
@@ -79,10 +78,7 @@ jar {
         vendor project.vendor
         license project.license
 
-        instruction 'Import-Package', """
-            org.apache.commons.rdf.api,
-            org.apache.commons.rdf.simple,
-            ${defaultOsgiImports}"""
+        instruction 'Import-Package', 'org.apache.commons.rdf.api,org.apache.commons.rdf.simple,*'
         instruction 'Export-Package', "edu.amherst.acdc.trellis.vocabulary;version=${projectOsgiVersion}"
     }
 }

@@ -63,7 +63,8 @@ public abstract class AbstractVocabularyTest {
                 .filterKeep(Node::isURI).mapWith(Node::getURI).filterKeep(Objects::nonNull).toSet();
 
         fields().forEach(field -> {
-            assertTrue("Field definition is not in published ontology!", subjects.contains(namespace() + field));
+            assertTrue("Field definition is not in published ontology! " + field,
+                    subjects.contains(namespace() + field));
         });
     }
 

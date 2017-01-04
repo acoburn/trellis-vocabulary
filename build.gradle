@@ -79,8 +79,11 @@ jar {
         vendor project.vendor
         license project.license
 
-        instruction 'Import-Package', 'org.apache.commons.rdf.api,*'
-        instruction 'Export-Package', 'edu.amherst.acdc.trellis.vocabulary'
+        instruction 'Import-Package', """
+            org.apache.commons.rdf.api,
+            org.apache.commons.rdf.simple,
+            ${defaultOsgiImports}"""
+        instruction 'Export-Package', "edu.amherst.acdc.trellis.vocabulary;version=${projectOsgiVersion}"
     }
 }
 
@@ -196,7 +199,7 @@ uploadArchives {
                 license {
                     name 'Apache License, Version 2.0'
                     url 'http://www.apache.org/licenses/LICENSE-2.0'
-                    comments 'Copyright (c) 2016 Amherst College'
+                    comments 'Copyright (c) 2017 Amherst College'
                 }
             }
         }

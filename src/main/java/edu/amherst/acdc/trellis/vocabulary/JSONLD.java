@@ -31,7 +31,7 @@ public class JSONLD {
     private static RDF rdf = new SimpleRDF();
 
     /* Namespace */
-    public static String uri = "https://www.w3.org/ns/json-ld#";
+    public static String uri = "http://www.w3.org/ns/json-ld#";
 
     /* Profiles */
     public static IRI context = rdf.createIRI(uri + "context");

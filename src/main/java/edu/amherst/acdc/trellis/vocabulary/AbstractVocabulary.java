@@ -15,29 +15,26 @@
  */
 package edu.amherst.acdc.trellis.vocabulary;
 
+import java.util.ServiceLoader;
+
 import org.apache.commons.rdf.api.IRI;
+import org.apache.commons.rdf.api.RDF;
 
 /**
- * JSON-LD vocabulary terms
- *
- * @see <a href="https://www.w3.org/ns/json-ld">The JSON-LD Vocabulary</a>
- *
  * @author acoburn
  */
-public class JSONLD extends AbstractVocabulary {
+abstract class AbstractVocabulary {
 
-    /* Namespace */
-    public static String uri = "http://www.w3.org/ns/json-ld#";
+    private static ServiceLoader<RDF> rdfLoader = ServiceLoader.load(RDF.class);
 
-    /* Profiles */
-    public static IRI context = createIRI(uri + "context");
+    private static RDF getInstance() {
+        for (final RDF rdf : rdfLoader) {
+            return rdf;
+        }
+        return null;
+    }
 
-    /* Extra definitions */
-    public static IRI expanded = createIRI(uri + "expanded");
-    public static IRI compacted = createIRI(uri + "compacted");
-    public static IRI flattened = createIRI(uri + "flattened");
-
-    private JSONLD() {
-        // prevent instantiation
+    protected static IRI createIRI(final String uri) {
+        return getInstance().createIRI(uri);
     }
 }

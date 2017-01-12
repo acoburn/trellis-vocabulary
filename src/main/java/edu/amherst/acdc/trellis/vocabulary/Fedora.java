@@ -16,8 +16,6 @@
 package edu.amherst.acdc.trellis.vocabulary;
 
 import org.apache.commons.rdf.api.IRI;
-import org.apache.commons.rdf.api.RDF;
-import org.apache.commons.rdf.simple.SimpleRDF;
 
 /**
  * RDF Terms from the Fedora Ontology
@@ -26,65 +24,63 @@ import org.apache.commons.rdf.simple.SimpleRDF;
  *
  * @author acoburn
  */
-public class Fedora {
-
-    private static RDF rdf = new SimpleRDF();
+public class Fedora extends AbstractVocabulary {
 
     /* Namespace */
     public static String uri = "http://fedora.info/definitions/v4/repository#";
 
     /* Classes */
-    public static IRI AnnotatedResource = rdf.createIRI(uri + "AnnotatedResource");
-    public static IRI Binary = rdf.createIRI(uri + "Binary");
-    public static IRI Configuration = rdf.createIRI(uri + "Configuration");
-    public static IRI Container = rdf.createIRI(uri + "Container");
-    public static IRI EmbedResources = rdf.createIRI(uri + "EmbedResources");
-    public static IRI InboundReferences = rdf.createIRI(uri + "InboundReferences");
-    public static IRI NonRdfSourceDescription = rdf.createIRI(uri + "NonRdfSourceDescription");
-    public static IRI Pairtree = rdf.createIRI(uri + "Pairtree");
-    public static IRI Relations = rdf.createIRI(uri + "Relations");
-    public static IRI RepositoryRoot = rdf.createIRI(uri + "RepositoryRoot");
-    public static IRI Resource = rdf.createIRI(uri + "Resource");
-    public static IRI ServerManaged = rdf.createIRI(uri + "ServerManaged");
-    public static IRI Skolem = rdf.createIRI(uri + "Skolem");
-    public static IRI Thing = rdf.createIRI(uri + "Thing");
-    public static IRI Tombstone = rdf.createIRI(uri + "Tombstone");
-    public static IRI Version = rdf.createIRI(uri + "Version");
+    public static IRI AnnotatedResource = createIRI(uri + "AnnotatedResource");
+    public static IRI Binary = createIRI(uri + "Binary");
+    public static IRI Configuration = createIRI(uri + "Configuration");
+    public static IRI Container = createIRI(uri + "Container");
+    public static IRI EmbedResources = createIRI(uri + "EmbedResources");
+    public static IRI InboundReferences = createIRI(uri + "InboundReferences");
+    public static IRI NonRdfSourceDescription = createIRI(uri + "NonRdfSourceDescription");
+    public static IRI Pairtree = createIRI(uri + "Pairtree");
+    public static IRI Relations = createIRI(uri + "Relations");
+    public static IRI RepositoryRoot = createIRI(uri + "RepositoryRoot");
+    public static IRI Resource = createIRI(uri + "Resource");
+    public static IRI ServerManaged = createIRI(uri + "ServerManaged");
+    public static IRI Skolem = createIRI(uri + "Skolem");
+    public static IRI Thing = createIRI(uri + "Thing");
+    public static IRI Tombstone = createIRI(uri + "Tombstone");
+    public static IRI Version = createIRI(uri + "Version");
 
     /* Named Individuals */
-    public static IRI inaccessibleResource = rdf.createIRI(uri + "inaccessibleResource");
+    public static IRI inaccessibleResource = createIRI(uri + "inaccessibleResource");
 
     /* Object Properties */
-    public static IRI baseVersion = rdf.createIRI(uri + "baseVersion");
-    public static IRI hasAccessRoles = rdf.createIRI(uri + "hasAccessRoles");
-    public static IRI hasFixityService = rdf.createIRI(uri + "hasFixityService");
-    public static IRI hasMember = rdf.createIRI(uri + "hasMember");
-    public static IRI hasNamespaces = rdf.createIRI(uri + "hasNamespaces");
-    public static IRI hasParent = rdf.createIRI(uri + "hasParent");
-    public static IRI hasResultsMember = rdf.createIRI(uri + "hasResultsMember");
-    public static IRI hasVersion = rdf.createIRI(uri + "hasVersion");
-    public static IRI hasVersions = rdf.createIRI(uri + "hasVersions");
-    public static IRI predecessors = rdf.createIRI(uri + "predecessors");
-    public static IRI sparql = rdf.createIRI(uri + "sparql");
+    public static IRI baseVersion = createIRI(uri + "baseVersion");
+    public static IRI hasAccessRoles = createIRI(uri + "hasAccessRoles");
+    public static IRI hasFixityService = createIRI(uri + "hasFixityService");
+    public static IRI hasMember = createIRI(uri + "hasMember");
+    public static IRI hasNamespaces = createIRI(uri + "hasNamespaces");
+    public static IRI hasParent = createIRI(uri + "hasParent");
+    public static IRI hasResultsMember = createIRI(uri + "hasResultsMember");
+    public static IRI hasVersion = createIRI(uri + "hasVersion");
+    public static IRI hasVersions = createIRI(uri + "hasVersions");
+    public static IRI predecessors = createIRI(uri + "predecessors");
+    public static IRI sparql = createIRI(uri + "sparql");
 
     /* Datatype Properties */
-    public static IRI computedChecksum = rdf.createIRI(uri + "computedChecksum");
-    public static IRI computedSize = rdf.createIRI(uri + "computedSize");
-    public static IRI created = rdf.createIRI(uri + "created");
-    public static IRI createdBy = rdf.createIRI(uri + "createdBy");
-    public static IRI hasLocation = rdf.createIRI(uri + "hasLocation");
-    public static IRI hasMoreResults = rdf.createIRI(uri + "hasMoreResults");
-    public static IRI hasTransactionProvider = rdf.createIRI(uri + "hasTransactionProvider");
-    public static IRI hasVersionLabel = rdf.createIRI(uri + "hasVersionLabel");
-    public static IRI isCheckedOut = rdf.createIRI(uri + "isCheckedOut");
-    public static IRI lastModified = rdf.createIRI(uri + "lastModified");
-    public static IRI lastModifiedBy = rdf.createIRI(uri + "lastModifiedBy");
-    public static IRI numberOfChildren = rdf.createIRI(uri + "numberOfChildren");
-    public static IRI numFixityErrors = rdf.createIRI(uri + "numFixityErrors");
-    public static IRI numFixityRepaired = rdf.createIRI(uri + "numFixityRepaired");
-    public static IRI objectCount = rdf.createIRI(uri + "objectCount");
-    public static IRI objectSize = rdf.createIRI(uri + "objectSize");
-    public static IRI writable = rdf.createIRI(uri + "writable");
+    public static IRI computedChecksum = createIRI(uri + "computedChecksum");
+    public static IRI computedSize = createIRI(uri + "computedSize");
+    public static IRI created = createIRI(uri + "created");
+    public static IRI createdBy = createIRI(uri + "createdBy");
+    public static IRI hasLocation = createIRI(uri + "hasLocation");
+    public static IRI hasMoreResults = createIRI(uri + "hasMoreResults");
+    public static IRI hasTransactionProvider = createIRI(uri + "hasTransactionProvider");
+    public static IRI hasVersionLabel = createIRI(uri + "hasVersionLabel");
+    public static IRI isCheckedOut = createIRI(uri + "isCheckedOut");
+    public static IRI lastModified = createIRI(uri + "lastModified");
+    public static IRI lastModifiedBy = createIRI(uri + "lastModifiedBy");
+    public static IRI numberOfChildren = createIRI(uri + "numberOfChildren");
+    public static IRI numFixityErrors = createIRI(uri + "numFixityErrors");
+    public static IRI numFixityRepaired = createIRI(uri + "numFixityRepaired");
+    public static IRI objectCount = createIRI(uri + "objectCount");
+    public static IRI objectSize = createIRI(uri + "objectSize");
+    public static IRI writable = createIRI(uri + "writable");
 
     private Fedora() {
         // prevent instantiation

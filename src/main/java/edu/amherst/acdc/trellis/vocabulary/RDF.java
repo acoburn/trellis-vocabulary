@@ -16,7 +16,6 @@
 package edu.amherst.acdc.trellis.vocabulary;
 
 import org.apache.commons.rdf.api.IRI;
-import org.apache.commons.rdf.simple.SimpleRDF;
 
 /**
  * RDF Terms from the W3C RDF Syntax Vocabulary
@@ -26,38 +25,36 @@ import org.apache.commons.rdf.simple.SimpleRDF;
  *
  * @author acoburn
  */
-public class RDF {
-
-    private static org.apache.commons.rdf.api.RDF rdf = new SimpleRDF();
+public class RDF extends AbstractVocabulary {
 
     /* Namespace */
     public static String uri = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 
     /* Classes */
-    public static IRI Property = rdf.createIRI(uri + "Property");
-    public static IRI Statement = rdf.createIRI(uri + "Statement");
-    public static IRI Bag = rdf.createIRI(uri + "Bag");
-    public static IRI Seq = rdf.createIRI(uri + "Seq");
-    public static IRI Alt = rdf.createIRI(uri + "Alt");
-    public static IRI List = rdf.createIRI(uri + "List");
+    public static IRI Property = createIRI(uri + "Property");
+    public static IRI Statement = createIRI(uri + "Statement");
+    public static IRI Bag = createIRI(uri + "Bag");
+    public static IRI Seq = createIRI(uri + "Seq");
+    public static IRI Alt = createIRI(uri + "Alt");
+    public static IRI List = createIRI(uri + "List");
 
     /* Datatypes */
-    public static IRI XMLLiteral = rdf.createIRI(uri + "XMLLiteral");
-    public static IRI HTML = rdf.createIRI(uri + "HTML");
-    public static IRI PlainLiteral = rdf.createIRI(uri + "PlainLiteral");
-    public static IRI langString = rdf.createIRI(uri + "langString");
+    public static IRI XMLLiteral = createIRI(uri + "XMLLiteral");
+    public static IRI HTML = createIRI(uri + "HTML");
+    public static IRI PlainLiteral = createIRI(uri + "PlainLiteral");
+    public static IRI langString = createIRI(uri + "langString");
 
     /* List */
-    public static IRI nil = rdf.createIRI(uri + "nil");
+    public static IRI nil = createIRI(uri + "nil");
 
     /* Properties */
-    public static IRI type = rdf.createIRI(uri + "type");
-    public static IRI subject = rdf.createIRI(uri + "subject");
-    public static IRI predicate = rdf.createIRI(uri + "predicate");
-    public static IRI object = rdf.createIRI(uri + "object");
-    public static IRI value = rdf.createIRI(uri + "value");
-    public static IRI first = rdf.createIRI(uri + "first");
-    public static IRI rest = rdf.createIRI(uri + "rest");
+    public static IRI type = createIRI(uri + "type");
+    public static IRI subject = createIRI(uri + "subject");
+    public static IRI predicate = createIRI(uri + "predicate");
+    public static IRI object = createIRI(uri + "object");
+    public static IRI value = createIRI(uri + "value");
+    public static IRI first = createIRI(uri + "first");
+    public static IRI rest = createIRI(uri + "rest");
 
     private RDF() {
         // prevent instantiation

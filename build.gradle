@@ -81,6 +81,9 @@ jar {
 
         instruction 'Import-Package', '*'
         instruction 'Export-Package', "edu.amherst.acdc.trellis.vocabulary;version=${projectOsgiVersion}"
+        instruction 'Require-Capability', '''
+            osgi.serviceloader; filter:="(osgi.serviceloader=org.apache.commons.rdf.api.RDF)";cardinality:=multiple,
+            osgi.extender; filter:="(osgi.extender=osgi.serviceloader.processor)"'''
     }
 }
 

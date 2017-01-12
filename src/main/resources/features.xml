@@ -4,7 +4,8 @@
     <details>Installs the Trellis Vocabulary bundle</details>
 
     <bundle dependency="true">mvn:org.apache.commons/commons-rdf-api/${commonsRdfVersion}</bundle>
-    <bundle dependency="true">mvn:org.apache.commons/commons-rdf-simple/${commonsRdfVersion}</bundle>
+    <bundle dependency="true">mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${spiflyVersion}</bundle>
+
     <bundle>mvn:edu.amherst.acdc/trellis-vocabulary/${project.version}</bundle>
   </feature>
 </features>

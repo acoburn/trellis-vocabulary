@@ -36,6 +36,7 @@ ext {
     xercesVersion = '2.11.0'
 
     /* OSGi */
+    spiflyVersion = '1.0.8'
     projectOsgiVersion = project.version.replaceAll("-SNAPSHOT", ".SNAPSHOT")
 }
 

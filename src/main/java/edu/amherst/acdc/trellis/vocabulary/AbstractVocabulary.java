@@ -28,8 +28,8 @@ abstract class AbstractVocabulary {
     private static ServiceLoader<RDF> rdfLoader = ServiceLoader.load(RDF.class);
 
     private static RDF getInstance() {
-        for (final RDF rdf : rdfLoader) {
-            return rdf;
+        for (final RDF impl : rdfLoader) {
+            return impl;
         }
         return null;
     }

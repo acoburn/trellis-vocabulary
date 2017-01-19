@@ -82,7 +82,7 @@ jar {
         instruction 'Import-Package', '*'
         instruction 'Export-Package', "edu.amherst.acdc.trellis.vocabulary;version=${projectOsgiVersion}"
         instruction 'Require-Capability', '''
-            osgi.serviceloader; filter:="(osgi.serviceloader=org.apache.commons.rdf.api.RDF)";cardinality:=multiple,
+            osgi.serviceloader; filter:="(osgi.serviceloader=org.apache.commons.rdf.api.RDF)";cardinality:=at_least_one,
             osgi.extender; filter:="(osgi.extender=osgi.serviceloader.processor)"'''
     }
 }

@@ -34,7 +34,9 @@ abstract class AbstractVocabulary {
         return null;
     }
 
+    private static RDF rdf = getInstance();
+
     protected static IRI createIRI(final String uri) {
-        return getInstance().createIRI(uri);
+        return rdf.createIRI(uri);
     }
 }

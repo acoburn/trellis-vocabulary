@@ -33,8 +33,10 @@ public class JSONLD extends AbstractVocabulary {
     public static IRI context = createIRI(uri + "context");
 
     /* Extra definitions */
-    public static IRI expanded = createIRI(uri + "expanded");
     public static IRI compacted = createIRI(uri + "compacted");
+    public static IRI compacted_flattened = createIRI(uri + "compacted-flattened");
+    public static IRI expanded = createIRI(uri + "expanded");
+    public static IRI expanded_flattened = createIRI(uri + "expanded-flattened");
     public static IRI flattened = createIRI(uri + "flattened");
 
     private JSONLD() {

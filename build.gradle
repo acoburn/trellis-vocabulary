@@ -189,9 +189,9 @@ uploadArchives {
             }
 
             scm {
-                connection 'scm:git:git://github.com/acoburn/trellis-vocabulary.git'
-                developerConnection 'scm:git:git@github.com/acoburn/trellis-vocabulary.git'
-                url 'https://github.com/acoburn/trellis-vocabulary'
+                connection 'scm:git:git://github.com/trellis-ldp/trellis-vocabulary.git'
+                developerConnection 'scm:git:git@github.com/trellis-ldp/trellis-vocabulary.git'
+                url 'https://github.com/trellis-ldp/trellis-vocabulary'
                 tag 'HEAD'
             }
 

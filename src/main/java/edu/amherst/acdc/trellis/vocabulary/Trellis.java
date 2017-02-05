@@ -28,6 +28,8 @@ public class Trellis extends AbstractVocabulary {
     public static String uri = "http://acdc.amherst.edu/ns/trellis#";
 
     /* Classes */
+    public static IRI Asynchronous = createIRI(uri + "Asynchronous");
+    public static IRI Synchronous = createIRI(uri + "Synchronous");
     public static IRI AccessViolation = createIRI(uri + "AccessViolation");
     public static IRI ConstraintViolation = createIRI(uri + "ConstraintViolation");
     public static IRI DefaultInteractionModel = createIRI(uri + "DefaultInteractionModel");

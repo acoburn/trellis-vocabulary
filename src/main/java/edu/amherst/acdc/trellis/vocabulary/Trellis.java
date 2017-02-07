@@ -30,6 +30,7 @@ public class Trellis extends AbstractVocabulary {
     /* Classes */
     public static IRI Asynchronous = createIRI(uri + "Asynchronous");
     public static IRI Synchronous = createIRI(uri + "Synchronous");
+    public static IRI AuditResources = createIRI(uri + "AuditResources");
     public static IRI AccessViolation = createIRI(uri + "AccessViolation");
     public static IRI ConstraintViolation = createIRI(uri + "ConstraintViolation");
     public static IRI DefaultInteractionModel = createIRI(uri + "DefaultInteractionModel");

@@ -18,7 +18,9 @@ package edu.amherst.acdc.trellis.vocabulary;
 import org.apache.commons.rdf.api.IRI;
 
 /**
- * RDF Terms from the XSD Vocabulary
+ * RDF Terms from the XML Schema Datatype Vocabulary
+ *
+ * @see <a href="https://www.w3.org/TR/xmlschema-2/">XML Schema Part 2</a>
  *
  * @author acoburn
  */
@@ -40,6 +42,12 @@ public class XSD extends AbstractVocabulary {
     public static IRI double_ = createIRI(uri + "double");
     public static IRI duration = createIRI(uri + "duration");
     public static IRI float_ = createIRI(uri + "float");
+    public static IRI gDay = createIRI(uri + "gDay");
+    public static IRI gMonth = createIRI(uri + "gMonth");
+    public static IRI gMonthDay = createIRI(uri + "gMonthDay");
+    public static IRI gYear = createIRI(uri + "gYear");
+    public static IRI gYearMonth = createIRI(uri + "gYearMonth");
+    public static IRI hexBinary = createIRI(uri + "hexBinary");
     public static IRI integer = createIRI(uri + "integer");
     public static IRI int_ = createIRI(uri + "int");
     public static IRI language = createIRI(uri + "language");

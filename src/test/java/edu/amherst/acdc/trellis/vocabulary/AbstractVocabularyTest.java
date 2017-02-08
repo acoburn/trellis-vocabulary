@@ -95,6 +95,8 @@ public abstract class AbstractVocabularyTest {
     }
 
     private Stream<String> fields() {
-        return stream(vocabulary().getFields()).map(Field::getName).filter(field -> !field.equals("uri"));
+        return stream(vocabulary().getFields()).map(Field::getName).map(name ->
+                name.endsWith("_") ? name.substring(0, name.length() - 1) : name)
+            .map(name -> name.replaceAll("_", "-")).filter(field -> !field.equals("uri"));
     }
 }

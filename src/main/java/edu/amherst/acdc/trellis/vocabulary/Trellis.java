@@ -28,7 +28,6 @@ public class Trellis extends AbstractVocabulary {
     public static String uri = "http://acdc.amherst.edu/ns/trellis#";
 
     /* Classes */
-    public static IRI AuditResources = createIRI(uri + "AuditResources");
     public static IRI AccessViolation = createIRI(uri + "AccessViolation");
     public static IRI ConstraintViolation = createIRI(uri + "ConstraintViolation");
     public static IRI DefaultInteractionModel = createIRI(uri + "DefaultInteractionModel");
@@ -38,6 +37,9 @@ public class Trellis extends AbstractVocabulary {
     public static IRI InvalidCardinality = createIRI(uri + "InvalidCardinality");
     public static IRI InvalidProperty = createIRI(uri + "InvalidProperty");
     public static IRI InvalidSubject = createIRI(uri + "InvalidSubject");
+    public static IRI PreferAudit = createIRI(uri + "PreferAudit");
+    public static IRI ServerManagedTriples = createIRI(uri + "ServerManagedTriples");
+    public static IRI UserManagedTriples = createIRI(uri + "UserManagedTriples");
 
     /* Properties */
     public static IRI containedBy = createIRI(uri + "containedBy");

@@ -36,7 +36,6 @@ public class Trellis extends AbstractVocabulary {
     public static IRI InvalidRange = createIRI(uri + "InvalidRange");
     public static IRI InvalidCardinality = createIRI(uri + "InvalidCardinality");
     public static IRI InvalidProperty = createIRI(uri + "InvalidProperty");
-    public static IRI InvalidSubject = createIRI(uri + "InvalidSubject");
     public static IRI PreferAudit = createIRI(uri + "PreferAudit");
     public static IRI ServerManagedTriples = createIRI(uri + "ServerManagedTriples");
     public static IRI UserManagedTriples = createIRI(uri + "UserManagedTriples");

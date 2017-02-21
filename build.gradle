@@ -225,8 +225,11 @@ checkstyle {
 
 sonarqube {
     properties {
-        property "sonar.projectName", "Amherst College Trellis Repository Vocabularies"
+        property "sonar.projectName", "Trellis Repository Vocabularies"
         property "sonar.projectKey", "edu.amherst.acdc:trellis-vocabulary"
+        property "sonar.links.homepage", "https://github.com/trellis-ldp/trellis"
+        property "sonar.links.issue", "https://github.com/trellis-ldp/trellis-vocabulary/issues"
+        property "sonar.links.scm_dev", "scm:git:git@github.com:trellis-ldp/trellis-vocabulary.git"
     }
 }
 

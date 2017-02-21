@@ -44,7 +44,7 @@ import org.slf4j.Logger;
  */
 public abstract class AbstractVocabularyTest {
 
-    private static final Logger LOGGER  = getLogger(AbstractVocabularyTest.class);
+    private static final Logger LOGGER = getLogger(AbstractVocabularyTest.class);
 
     public abstract String namespace();
 

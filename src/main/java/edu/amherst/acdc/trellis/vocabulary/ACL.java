@@ -24,30 +24,30 @@ import org.apache.commons.rdf.api.IRI;
  *
  * @author acoburn
  */
-public class ACL extends AbstractVocabulary {
+public final class ACL extends BaseVocabulary {
 
     /* Namespace */
-    public static String uri = "http://www.w3.org/ns/auth/acl#";
+    public static final String uri = "http://www.w3.org/ns/auth/acl#";
 
     /* Classes */
-    public static IRI Access = createIRI(uri + "Access");
-    public static IRI Append = createIRI(uri + "Append");
-    public static IRI Authorization = createIRI(uri + "Authorization");
-    public static IRI Control = createIRI(uri + "Control");
-    public static IRI Read = createIRI(uri + "Read");
-    public static IRI Write = createIRI(uri + "Write");
+    public static final IRI Access = createIRI(uri + "Access");
+    public static final IRI Append = createIRI(uri + "Append");
+    public static final IRI Authorization = createIRI(uri + "Authorization");
+    public static final IRI Control = createIRI(uri + "Control");
+    public static final IRI Read = createIRI(uri + "Read");
+    public static final IRI Write = createIRI(uri + "Write");
 
     /* Properties */
-    public static IRI accessControl = createIRI(uri + "accessControl");
-    public static IRI accessTo = createIRI(uri + "accessTo");
-    public static IRI accessToClass = createIRI(uri + "accessToClass");
-    public static IRI agent = createIRI(uri + "agent");
-    public static IRI agentClass = createIRI(uri + "agentClass");
-    public static IRI agentGroup = createIRI(uri + "agentGroup");
-    public static IRI defaultForNew = createIRI(uri + "defaultForNew");
-    public static IRI delegates = createIRI(uri + "delegates");
-    public static IRI mode = createIRI(uri + "mode");
-    public static IRI owner = createIRI(uri + "owner");
+    public static final IRI accessControl = createIRI(uri + "accessControl");
+    public static final IRI accessTo = createIRI(uri + "accessTo");
+    public static final IRI accessToClass = createIRI(uri + "accessToClass");
+    public static final IRI agent = createIRI(uri + "agent");
+    public static final IRI agentClass = createIRI(uri + "agentClass");
+    public static final IRI agentGroup = createIRI(uri + "agentGroup");
+    public static final IRI defaultForNew = createIRI(uri + "defaultForNew");
+    public static final IRI delegates = createIRI(uri + "delegates");
+    public static final IRI mode = createIRI(uri + "mode");
+    public static final IRI owner = createIRI(uri + "owner");
 
     private ACL() {
         // prevent instantiation

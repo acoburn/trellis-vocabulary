@@ -24,20 +24,20 @@ import org.apache.commons.rdf.api.IRI;
  *
  * @author acoburn
  */
-public class JSONLD extends AbstractVocabulary {
+public final class JSONLD extends BaseVocabulary {
 
     /* Namespace */
-    public static String uri = "http://www.w3.org/ns/json-ld#";
+    public static final String uri = "http://www.w3.org/ns/json-ld#";
 
     /* Profiles */
-    public static IRI context = createIRI(uri + "context");
+    public static final IRI context = createIRI(uri + "context");
 
     /* Extra definitions */
-    public static IRI compacted = createIRI(uri + "compacted");
-    public static IRI compacted_flattened = createIRI(uri + "compacted-flattened");
-    public static IRI expanded = createIRI(uri + "expanded");
-    public static IRI expanded_flattened = createIRI(uri + "expanded-flattened");
-    public static IRI flattened = createIRI(uri + "flattened");
+    public static final IRI compacted = createIRI(uri + "compacted");
+    public static final IRI compacted_flattened = createIRI(uri + "compacted-flattened");
+    public static final IRI expanded = createIRI(uri + "expanded");
+    public static final IRI expanded_flattened = createIRI(uri + "expanded-flattened");
+    public static final IRI flattened = createIRI(uri + "flattened");
 
     private JSONLD() {
         // prevent instantiation

@@ -23,7 +23,7 @@ import org.apache.commons.rdf.api.RDF;
 /**
  * @author acoburn
  */
-abstract class AbstractVocabulary {
+class BaseVocabulary {
 
     private static ServiceLoader<RDF> rdfLoader = ServiceLoader.load(RDF.class);
 
@@ -38,5 +38,9 @@ abstract class AbstractVocabulary {
 
     protected static IRI createIRI(final String uri) {
         return rdf.createIRI(uri);
+    }
+
+    protected BaseVocabulary() {
+        // prevent direct instantiation
     }
 }

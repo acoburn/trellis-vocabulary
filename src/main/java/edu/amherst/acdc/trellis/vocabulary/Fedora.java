@@ -24,14 +24,14 @@ import org.apache.commons.rdf.api.IRI;
  *
  * @author acoburn
  */
-public class Fedora extends AbstractVocabulary {
+public final class Fedora extends BaseVocabulary {
 
     /* Namespace */
-    public static String uri = "http://fedora.info/definitions/repository#";
+    public static final String uri = "http://fedora.info/definitions/repository#";
 
     /* Classes */
-    public static IRI EmbedResources = createIRI(uri + "EmbedResources");
-    public static IRI InboundReferences = createIRI(uri + "InboundReferences");
+    public static final IRI EmbedResources = createIRI(uri + "EmbedResources");
+    public static final IRI InboundReferences = createIRI(uri + "InboundReferences");
 
     private Fedora() {
         // prevent instantiation

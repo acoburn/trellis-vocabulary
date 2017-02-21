@@ -22,24 +22,24 @@ import org.apache.commons.rdf.api.IRI;
  *
  * @author acoburn
  */
-public class Trellis extends AbstractVocabulary {
+public final class Trellis extends BaseVocabulary {
 
     /* Namespace */
-    public static String uri = "http://acdc.amherst.edu/ns/trellis#";
+    public static final String uri = "http://acdc.amherst.edu/ns/trellis#";
 
     /* Classes */
-    public static IRI AccessViolation = createIRI(uri + "AccessViolation");
-    public static IRI ConstraintViolation = createIRI(uri + "ConstraintViolation");
-    public static IRI DefaultInteractionModel = createIRI(uri + "DefaultInteractionModel");
-    public static IRI InvalidInteractionModel = createIRI(uri + "InvalidInteractionModel");
-    public static IRI InvalidType = createIRI(uri + "InvalidType");
-    public static IRI InvalidRange = createIRI(uri + "InvalidRange");
-    public static IRI InvalidCardinality = createIRI(uri + "InvalidCardinality");
-    public static IRI InvalidProperty = createIRI(uri + "InvalidProperty");
-    public static IRI PreferAudit = createIRI(uri + "PreferAudit");
-    public static IRI ServerManagedTriples = createIRI(uri + "ServerManagedTriples");
-    public static IRI UserManagedTriples = createIRI(uri + "UserManagedTriples");
+    public static final IRI AccessViolation = createIRI(uri + "AccessViolation");
+    public static final IRI ConstraintViolation = createIRI(uri + "ConstraintViolation");
+    public static final IRI DefaultInteractionModel = createIRI(uri + "DefaultInteractionModel");
+    public static final IRI InvalidInteractionModel = createIRI(uri + "InvalidInteractionModel");
+    public static final IRI InvalidType = createIRI(uri + "InvalidType");
+    public static final IRI InvalidRange = createIRI(uri + "InvalidRange");
+    public static final IRI InvalidCardinality = createIRI(uri + "InvalidCardinality");
+    public static final IRI InvalidProperty = createIRI(uri + "InvalidProperty");
+    public static final IRI PreferAudit = createIRI(uri + "PreferAudit");
+    public static final IRI ServerManagedTriples = createIRI(uri + "ServerManagedTriples");
+    public static final IRI UserManagedTriples = createIRI(uri + "UserManagedTriples");
 
     /* Properties */
-    public static IRI containedBy = createIRI(uri + "containedBy");
+    public static final IRI containedBy = createIRI(uri + "containedBy");
 }

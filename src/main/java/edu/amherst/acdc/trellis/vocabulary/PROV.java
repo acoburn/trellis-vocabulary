@@ -121,6 +121,6 @@ public final class PROV extends BaseVocabulary {
     public static final IRI wasInfluencedBy = createIRI(uri + "wasInfluencedBy");
 
     private PROV() {
-        // prevent instantiation
+        super();
     }
 }

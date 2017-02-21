@@ -42,4 +42,8 @@ public final class Trellis extends BaseVocabulary {
 
     /* Properties */
     public static final IRI containedBy = createIRI(uri + "containedBy");
+
+    private Trellis() {
+        super();
+    }
 }

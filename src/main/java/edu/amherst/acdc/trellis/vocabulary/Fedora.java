@@ -34,6 +34,6 @@ public final class Fedora extends BaseVocabulary {
     public static final IRI InboundReferences = createIRI(uri + "InboundReferences");
 
     private Fedora() {
-        // prevent instantiation
+        super();
     }
 }

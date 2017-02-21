@@ -50,6 +50,6 @@ public final class RDFS extends BaseVocabulary {
     public static final IRI member = createIRI(uri + "member");
 
     private RDFS() {
-        // prevent instantiation
+        super();
     }
 }

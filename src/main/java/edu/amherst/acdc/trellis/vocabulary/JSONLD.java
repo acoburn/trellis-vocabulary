@@ -40,6 +40,6 @@ public final class JSONLD extends BaseVocabulary {
     public static final IRI flattened = createIRI(uri + "flattened");
 
     private JSONLD() {
-        // prevent instantiation
+        super();
     }
 }

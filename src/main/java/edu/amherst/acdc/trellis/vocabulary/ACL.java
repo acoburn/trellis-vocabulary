@@ -50,6 +50,6 @@ public final class ACL extends BaseVocabulary {
     public static final IRI owner = createIRI(uri + "owner");
 
     private ACL() {
-        // prevent instantiation
+        super();
     }
 }

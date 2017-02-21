@@ -171,6 +171,6 @@ public final class AS extends BaseVocabulary {
     public static final IRI source = createIRI(uri + "source");
 
     private AS() {
-        // prevent instantiation
+        super();
     }
 }

@@ -105,6 +105,6 @@ public final class OA extends BaseVocabulary {
     public static final IRI PreferContainedIRIs = createIRI(uri + "PreferContainedIRIs");
 
     private OA() {
-        // prevent instantiation
+        super();
     }
 }

@@ -68,6 +68,6 @@ public final class XSD extends BaseVocabulary {
     public static final IRI yearMonthDuration = createIRI(uri + "yearMonthDuration");
 
     private XSD() {
-        // prevent instantiation
+        super();
     }
 }

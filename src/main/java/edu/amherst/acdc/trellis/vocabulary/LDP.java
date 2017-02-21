@@ -70,6 +70,6 @@ public final class LDP extends BaseVocabulary {
     public static final IRI MemberSubject = createIRI(uri + "MemberSubject");
 
     private LDP() {
-        // prevent instantiation
+        super();
     }
 }

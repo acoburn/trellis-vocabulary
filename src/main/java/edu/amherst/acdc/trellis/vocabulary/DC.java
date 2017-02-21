@@ -111,7 +111,7 @@ public final class DC extends BaseVocabulary {
     public static final IRI valid = createIRI(uri + "valid");
 
     private DC() {
-        // prevent instantiation
+        super();
     }
 }
 

@@ -57,6 +57,6 @@ public final class RDF extends BaseVocabulary {
     public static final IRI rest = createIRI(uri + "rest");
 
     private RDF() {
-        // prevent instantiation
+        super();
     }
 }

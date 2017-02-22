@@ -29,9 +29,8 @@ public final class Fedora extends BaseVocabulary {
     /* Namespace */
     public static final String uri = "http://fedora.info/definitions/repository#";
 
-    /* Classes */
-    public static final IRI EmbedResources = createIRI(uri + "EmbedResources");
-    public static final IRI InboundReferences = createIRI(uri + "InboundReferences");
+    /* Named Individuals */
+    public static final IRI PreferInboundReferences = createIRI(uri + "PreferInboundReferences");
 
     private Fedora() {
         super();

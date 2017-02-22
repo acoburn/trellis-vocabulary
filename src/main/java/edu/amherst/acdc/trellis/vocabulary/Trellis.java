@@ -37,8 +37,8 @@ public final class Trellis extends BaseVocabulary {
     public static final IRI InvalidCardinality = createIRI(uri + "InvalidCardinality");
     public static final IRI InvalidProperty = createIRI(uri + "InvalidProperty");
     public static final IRI PreferAudit = createIRI(uri + "PreferAudit");
-    public static final IRI ServerManagedTriples = createIRI(uri + "ServerManagedTriples");
-    public static final IRI UserManagedTriples = createIRI(uri + "UserManagedTriples");
+    public static final IRI PreferServerManaged = createIRI(uri + "PreferServerManaged");
+    public static final IRI PreferUserManaged = createIRI(uri + "PreferUserManaged");
 
     /* Properties */
     public static final IRI containedBy = createIRI(uri + "containedBy");

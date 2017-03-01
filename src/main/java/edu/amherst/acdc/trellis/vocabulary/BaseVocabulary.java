@@ -25,16 +25,7 @@ import org.apache.commons.rdf.api.RDF;
  */
 class BaseVocabulary {
 
-    private static ServiceLoader<RDF> rdfLoader = ServiceLoader.load(RDF.class);
-
-    private static RDF getInstance() {
-        for (final RDF impl : rdfLoader) {
-            return impl;
-        }
-        return null;
-    }
-
-    private static RDF rdf = getInstance();
+    private static RDF rdf = ServiceLoader.load(RDF.class).iterator().next();
 
     protected static IRI createIRI(final String uri) {
         return rdf.createIRI(uri);

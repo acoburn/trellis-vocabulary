@@ -31,6 +31,7 @@ public final class Trellis extends BaseVocabulary {
     public static final IRI AccessViolation = createIRI(uri + "AccessViolation");
     public static final IRI ConstraintViolation = createIRI(uri + "ConstraintViolation");
     public static final IRI DefaultInteractionModel = createIRI(uri + "DefaultInteractionModel");
+    public static final IRI DeletedResource = createIRI(uri + "DeletedResource");
     public static final IRI InvalidInteractionModel = createIRI(uri + "InvalidInteractionModel");
     public static final IRI InvalidType = createIRI(uri + "InvalidType");
     public static final IRI InvalidRange = createIRI(uri + "InvalidRange");

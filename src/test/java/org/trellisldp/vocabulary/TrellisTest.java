@@ -21,7 +21,7 @@ public class TrellisTest extends AbstractVocabularyTest {
 
     @Override
     public String namespace() {
-        return "http://acdc.amherst.edu/ns/trellis#";
+        return "http://www.trellisldp.org/ns/trellis#";
     }
 
     @Override

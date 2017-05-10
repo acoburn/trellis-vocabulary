@@ -23,7 +23,7 @@ import org.apache.commons.rdf.api.IRI;
 public final class Trellis extends BaseVocabulary {
 
     /* Namespace */
-    public static final String uri = "http://acdc.amherst.edu/ns/trellis#";
+    public static final String uri = "http://www.trellisldp.org/ns/trellis#";
 
     /* Classes */
     public static final IRI AccessViolation = createIRI(uri + "AccessViolation");

@@ -18,6 +18,8 @@ import org.apache.commons.rdf.api.IRI;
 /**
  * RDF Terms from the trellis vocabulary
  *
+ * @see <a href="http://www.trellisldp.org/ns/trellis">Trellis repository vocabulary</a>
+ *
  * @author acoburn
  */
 public final class Trellis extends BaseVocabulary {

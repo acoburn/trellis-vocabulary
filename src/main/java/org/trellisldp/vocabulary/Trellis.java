@@ -28,8 +28,11 @@ public final class Trellis extends BaseVocabulary {
     public static final String uri = "http://www.trellisldp.org/ns/trellis#";
 
     /* Classes */
-    public static final IRI AccessViolation = createIRI(uri + "AccessViolation");
     public static final IRI ConstraintViolation = createIRI(uri + "ConstraintViolation");
+
+    /* Named Individuals */
+    public static final IRI AccessViolation = createIRI(uri + "AccessViolation");
+    public static final IRI AnonymousUser = createIRI(uri + "AnonymousUser");
     public static final IRI DefaultInteractionModel = createIRI(uri + "DefaultInteractionModel");
     public static final IRI DeletedResource = createIRI(uri + "DeletedResource");
     public static final IRI InvalidInteractionModel = createIRI(uri + "InvalidInteractionModel");
@@ -40,6 +43,7 @@ public final class Trellis extends BaseVocabulary {
     public static final IRI PreferAudit = createIRI(uri + "PreferAudit");
     public static final IRI PreferServerManaged = createIRI(uri + "PreferServerManaged");
     public static final IRI PreferUserManaged = createIRI(uri + "PreferUserManaged");
+    public static final IRI RepositoryAdministrator = createIRI(uri + "RepositoryAdministrator");
 
     private Trellis() {
         super();

@@ -53,7 +53,7 @@ public abstract class AbstractVocabularyTest {
     }
 
     @Test
-    public void testEventVocabulary() {
+    public void testVocabulary() {
         final Graph graph = createDefaultGraph();
         read(graph, namespace());
 
@@ -67,7 +67,7 @@ public abstract class AbstractVocabularyTest {
     }
 
     @Test
-    public void testEventVocabularyRev() {
+    public void testVocabularyRev() {
         final Graph graph = createDefaultGraph();
         read(graph, namespace());
 

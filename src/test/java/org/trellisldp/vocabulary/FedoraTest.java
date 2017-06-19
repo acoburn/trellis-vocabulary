@@ -13,24 +13,19 @@
  */
 package org.trellisldp.vocabulary;
 
-import org.apache.commons.rdf.api.IRI;
-
 /**
- * RDF Terms from the Fedora Ontology
- *
- * @see <a href="http://fedora.info/definitions/repository">Fedora Ontology</a>
- *
+ * Test the Fedora Vocabulary Class
  * @author acoburn
  */
-public final class Fedora extends BaseVocabulary {
+public class FedoraTest extends AbstractVocabularyTest {
 
-    /* Namespace */
-    public static final String uri = "http://fedora.info/definitions/fcrepo#";
+    @Override
+    public String namespace() {
+        return "http://fedora.info/definitions/fcrepo#";
+    }
 
-    /* Named Individuals */
-    public static final IRI PreferInboundReferences = createIRI(uri + "PreferInboundReferences");
-
-    private Fedora() {
-        super();
+    @Override
+    public Class vocabulary() {
+        return Fedora.class;
     }
 }

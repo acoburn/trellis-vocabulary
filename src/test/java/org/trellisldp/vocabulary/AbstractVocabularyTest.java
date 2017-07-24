@@ -48,6 +48,10 @@ public abstract class AbstractVocabularyTest {
 
     public abstract Class vocabulary();
 
+    public Boolean isStrict() {
+        return true;
+    }
+
     static {
         setDefaultHttpClient(create().setRedirectStrategy(new LaxRedirectStrategy()).build());
     }
@@ -61,8 +65,12 @@ public abstract class AbstractVocabularyTest {
                 .filterKeep(Node::isURI).mapWith(Node::getURI).filterKeep(Objects::nonNull).toSet();
 
         fields().forEach(field -> {
-            assertTrue("Field definition is not in published ontology! " + field,
-                    subjects.contains(namespace() + field));
+            if (isStrict()) {
+                assertTrue("Field definition is not in published ontology! " + field,
+                        subjects.contains(namespace() + field));
+            } else if (!subjects.contains(namespace() + field)) {
+                LOGGER.warn("Field definition is not in published ontology! {}", field);
+            }
         });
     }
 

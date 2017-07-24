@@ -42,7 +42,7 @@ public final class ACL extends BaseVocabulary {
     public static final IRI agent = createIRI(uri + "agent");
     public static final IRI agentClass = createIRI(uri + "agentClass");
     public static final IRI agentGroup = createIRI(uri + "agentGroup");
-    public static final IRI defaultForNew = createIRI(uri + "defaultForNew");
+    public static final IRI default_ = createIRI(uri + "default");
     public static final IRI delegates = createIRI(uri + "delegates");
     public static final IRI mode = createIRI(uri + "mode");
     public static final IRI owner = createIRI(uri + "owner");

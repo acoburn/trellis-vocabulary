@@ -15,11 +15,10 @@ package org.trellisldp.vocabulary;
 
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.toSet;
-import static org.apache.http.impl.client.HttpClientBuilder.create;
 import static org.apache.jena.graph.Factory.createDefaultGraph;
 import static org.apache.jena.graph.Node.ANY;
-import static org.apache.jena.riot.web.HttpOp.setDefaultHttpClient;
-import static org.apache.jena.riot.RDFDataMgr.read;
+import static org.apache.jena.riot.RDFLanguages.contentTypeToLang;
+import static org.apache.jena.riot.web.HttpOp.execHttpGet;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -30,10 +29,11 @@ import java.util.Set;
 import java.lang.reflect.Field;
 import java.util.stream.Stream;
 
-import org.apache.http.impl.client.LaxRedirectStrategy;
+import org.apache.jena.atlas.web.TypedInputStream;
 import org.apache.jena.graph.Graph;
 import org.apache.jena.graph.Node;
 import org.apache.jena.graph.Triple;
+import org.apache.jena.riot.RDFParser;
 import org.junit.Test;
 import org.slf4j.Logger;
 
@@ -44,6 +44,8 @@ public abstract class AbstractVocabularyTest {
 
     private static final Logger LOGGER = getLogger(AbstractVocabularyTest.class);
 
+    private static final String ACCEPT = "text/turtle, application/rdf+xml, application/ld+json";
+
     public abstract String namespace();
 
     public abstract Class vocabulary();
@@ -52,14 +54,16 @@ public abstract class AbstractVocabularyTest {
         return true;
     }
 
-    static {
-        setDefaultHttpClient(create().setRedirectStrategy(new LaxRedirectStrategy()).build());
+    private static Graph getVocabulary(final String url) {
+        final Graph graph = createDefaultGraph();
+        final TypedInputStream is = execHttpGet(url, ACCEPT);
+        RDFParser.source(is).lang(contentTypeToLang(is.getMediaType())).parse(graph);
+        return graph;
     }
 
     @Test
     public void testVocabulary() {
-        final Graph graph = createDefaultGraph();
-        read(graph, namespace());
+        final Graph graph = getVocabulary(namespace());
 
         final Set<String> subjects = graph.find(ANY, ANY, ANY).mapWith(Triple::getSubject)
                 .filterKeep(Node::isURI).mapWith(Node::getURI).filterKeep(Objects::nonNull).toSet();
@@ -76,8 +80,7 @@ public abstract class AbstractVocabularyTest {
 
     @Test
     public void testVocabularyRev() {
-        final Graph graph = createDefaultGraph();
-        read(graph, namespace());
+        final Graph graph = getVocabulary(namespace());
 
         final Set<String> subjects = fields().map(namespace()::concat).collect(toSet());
 

@@ -17,8 +17,6 @@ import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.toSet;
 import static org.apache.jena.graph.Factory.createDefaultGraph;
 import static org.apache.jena.graph.Node.ANY;
-import static org.apache.jena.riot.RDFLanguages.contentTypeToLang;
-import static org.apache.jena.riot.web.HttpOp.execHttpGet;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -29,7 +27,6 @@ import java.util.Set;
 import java.lang.reflect.Field;
 import java.util.stream.Stream;
 
-import org.apache.jena.atlas.web.TypedInputStream;
 import org.apache.jena.graph.Graph;
 import org.apache.jena.graph.Node;
 import org.apache.jena.graph.Triple;
@@ -56,8 +53,7 @@ public abstract class AbstractVocabularyTest {
 
     private static Graph getVocabulary(final String url) {
         final Graph graph = createDefaultGraph();
-        final TypedInputStream is = execHttpGet(url, ACCEPT);
-        RDFParser.source(is).lang(contentTypeToLang(is.getMediaType())).parse(graph);
+        RDFParser.source(url).httpAccept(ACCEPT).parse(graph);
         return graph;
     }
 

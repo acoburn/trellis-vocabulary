@@ -37,7 +37,6 @@ ext {
     xercesVersion = '2.11.0'
 
     /* OSGi */
-    spiflyVersion = '1.0.8'
     projectOsgiVersion = project.version.replaceAll("-SNAPSHOT", ".SNAPSHOT")
 }
 
@@ -82,9 +81,6 @@ jar {
 
         instruction 'Import-Package', '*'
         instruction 'Export-Package', "org.trellisldp.vocabulary;version=${projectOsgiVersion}"
-        instruction 'Require-Capability', '''
-            osgi.serviceloader; filter:="(osgi.serviceloader=org.apache.commons.rdf.api.RDF)";cardinality:=at_least_one,
-            osgi.extender; filter:="(osgi.extender=osgi.serviceloader.processor)"'''
     }
 }
 

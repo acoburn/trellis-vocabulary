@@ -20,11 +20,6 @@ package org.trellisldp.vocabulary;
 public class ACLTest extends AbstractVocabularyTest {
 
     @Override
-    public Boolean isStrict() {
-        return false;
-    }
-
-    @Override
     public String namespace() {
         return "http://www.w3.org/ns/auth/acl#";
     }

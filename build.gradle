@@ -45,8 +45,6 @@ configurations {
     buildToolsConfig
 }
 
-cobertura.coverageFormats = ['html', 'xml']
-
 dependencies {
     compile group: 'org.apache.commons', name: 'commons-rdf-api', version: commonsRdfVersion
 
@@ -108,6 +106,13 @@ artifacts {
 
 jacoco {
     toolVersion = "0.7.6.201602180812"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
 }
 
 license {

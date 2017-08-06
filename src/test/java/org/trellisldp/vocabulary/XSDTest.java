@@ -13,14 +13,10 @@
  */
 package org.trellisldp.vocabulary;
 
+import static org.apache.jena.vocabulary.XSD.NS;
+import static org.apache.jena.vocabulary.XSD.dateTime;
+import static org.apache.jena.vocabulary.XSD.xstring;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.BufferedReader;
-import java.net.URL;
-import java.net.MalformedURLException;
 
 import org.junit.Test;
 
@@ -37,17 +33,13 @@ public class XSDTest {
     public void testVocabulary() {
         assertEquals(namespace() + "dateTime", XSD.dateTime.getIRIString());
         assertEquals(namespace() + "string", XSD.string_.getIRIString());
+        assertEquals(dateTime.getURI(), XSD.dateTime.getIRIString());
+        assertEquals(xstring.getURI(), XSD.string_.getIRIString());
     }
 
     @Test
-    public void checkUri() throws IOException, MalformedURLException {
+    public void checkUri() {
         assertEquals(namespace(), XSD.uri);
-        final URL url = new URL(namespace());
-        final BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-        Integer count = 0;
-        while (in.readLine() != null) {
-            count++;
-        }
-        assertTrue(count > 0);
+        assertEquals(NS, XSD.uri);
     }
 }

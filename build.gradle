@@ -8,7 +8,7 @@ plugins {
 
 apply plugin: 'maven'
 apply plugin: 'osgi'
-apply plugin: 'java'
+apply plugin: 'java-library'
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
 apply plugin: 'checkstyle'
@@ -47,7 +47,7 @@ configurations {
 }
 
 dependencies {
-    compile group: 'org.apache.commons', name: 'commons-rdf-api', version: commonsRdfVersion
+    api group: 'org.apache.commons', name: 'commons-rdf-api', version: commonsRdfVersion
 
     testCompile group: 'org.apache.commons', name: 'commons-rdf-jena', version: commonsRdfVersion
     testCompile group: 'org.apache.jena', name: 'jena-osgi', version: jenaVersion

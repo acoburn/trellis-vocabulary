@@ -25,31 +25,31 @@ import org.apache.commons.rdf.api.IRI;
 public final class Trellis extends BaseVocabulary {
 
     /* Namespace */
-    public static final String uri = "http://www.trellisldp.org/ns/trellis#";
+    public static final String URI = "http://www.trellisldp.org/ns/trellis#";
 
     /* Classes */
-    public static final IRI ConstraintViolation = createIRI(uri + "ConstraintViolation");
-    public static final IRI DeletedResource = createIRI(uri + "DeletedResource");
-    public static final IRI BinaryUploadService = createIRI(uri + "BinaryUploadService");
+    public static final IRI ConstraintViolation = createIRI(URI + "ConstraintViolation");
+    public static final IRI DeletedResource = createIRI(URI + "DeletedResource");
+    public static final IRI BinaryUploadService = createIRI(URI + "BinaryUploadService");
 
     /* Properties */
-    public static final IRI multipartUploadService = createIRI(uri + "multipartUploadService");
+    public static final IRI multipartUploadService = createIRI(URI + "multipartUploadService");
 
     /* Named Individuals */
-    public static final IRI AccessViolation = createIRI(uri + "AccessViolation");
-    public static final IRI AnonymousUser = createIRI(uri + "AnonymousUser");
-    public static final IRI DefaultInteractionModel = createIRI(uri + "DefaultInteractionModel");
-    public static final IRI InvalidInteractionModel = createIRI(uri + "InvalidInteractionModel");
-    public static final IRI InvalidType = createIRI(uri + "InvalidType");
-    public static final IRI InvalidRange = createIRI(uri + "InvalidRange");
-    public static final IRI InvalidCardinality = createIRI(uri + "InvalidCardinality");
-    public static final IRI InvalidPayloadSize = createIRI(uri + "InvalidPayloadSize");
-    public static final IRI InvalidProperty = createIRI(uri + "InvalidProperty");
-    public static final IRI PreferAccessControl = createIRI(uri + "PreferAccessControl");
-    public static final IRI PreferAudit = createIRI(uri + "PreferAudit");
-    public static final IRI PreferServerManaged = createIRI(uri + "PreferServerManaged");
-    public static final IRI PreferUserManaged = createIRI(uri + "PreferUserManaged");
-    public static final IRI RepositoryAdministrator = createIRI(uri + "RepositoryAdministrator");
+    public static final IRI AccessViolation = createIRI(URI + "AccessViolation");
+    public static final IRI AnonymousUser = createIRI(URI + "AnonymousUser");
+    public static final IRI DefaultInteractionModel = createIRI(URI + "DefaultInteractionModel");
+    public static final IRI InvalidInteractionModel = createIRI(URI + "InvalidInteractionModel");
+    public static final IRI InvalidType = createIRI(URI + "InvalidType");
+    public static final IRI InvalidRange = createIRI(URI + "InvalidRange");
+    public static final IRI InvalidCardinality = createIRI(URI + "InvalidCardinality");
+    public static final IRI InvalidPayloadSize = createIRI(URI + "InvalidPayloadSize");
+    public static final IRI InvalidProperty = createIRI(URI + "InvalidProperty");
+    public static final IRI PreferAccessControl = createIRI(URI + "PreferAccessControl");
+    public static final IRI PreferAudit = createIRI(URI + "PreferAudit");
+    public static final IRI PreferServerManaged = createIRI(URI + "PreferServerManaged");
+    public static final IRI PreferUserManaged = createIRI(URI + "PreferUserManaged");
+    public static final IRI RepositoryAdministrator = createIRI(URI + "RepositoryAdministrator");
 
     private Trellis() {
         super();

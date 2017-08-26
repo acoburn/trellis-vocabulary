@@ -92,16 +92,16 @@ public abstract class AbstractVocabularyTest {
 
     @Test
     public void testNamespace() throws Exception {
-        final Optional<Field> uri = stream(vocabulary().getFields()).filter(field -> field.getName().equals("uri"))
+        final Optional<Field> uri = stream(vocabulary().getFields()).filter(field -> field.getName().equals("URI"))
                 .findFirst();
 
-        assertTrue(vocabulary().getName() + " does not contain a 'uri' field!", uri.isPresent());
+        assertTrue(vocabulary().getName() + " does not contain a 'URI' field!", uri.isPresent());
         assertEquals("Namespaces do not match!", namespace(), uri.get().get(null));
     }
 
     private Stream<String> fields() {
         return stream(vocabulary().getFields()).map(Field::getName).map(name ->
                 name.endsWith("_") ? name.substring(0, name.length() - 1) : name)
-            .map(name -> name.replaceAll("_", "-")).filter(field -> !field.equals("uri"));
+            .map(name -> name.replaceAll("_", "-")).filter(field -> !field.equals("URI"));
     }
 }

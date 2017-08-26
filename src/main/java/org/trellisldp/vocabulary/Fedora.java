@@ -25,10 +25,10 @@ import org.apache.commons.rdf.api.IRI;
 public final class Fedora extends BaseVocabulary {
 
     /* Namespace */
-    public static final String uri = "http://fedora.info/definitions/fcrepo#";
+    public static final String URI = "http://fedora.info/definitions/fcrepo#";
 
     /* Named Individuals */
-    public static final IRI PreferInboundReferences = createIRI(uri + "PreferInboundReferences");
+    public static final IRI PreferInboundReferences = createIRI(URI + "PreferInboundReferences");
 
     private Fedora() {
         super();

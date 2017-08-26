@@ -26,26 +26,26 @@ import org.apache.commons.rdf.api.IRI;
 public final class RDFS extends BaseVocabulary {
 
     /* Namespace */
-    public static final String uri = "http://www.w3.org/2000/01/rdf-schema#";
+    public static final String URI = "http://www.w3.org/2000/01/rdf-schema#";
 
     /* Classes */
-    public static final IRI Resource = createIRI(uri + "Resource");
-    public static final IRI Class = createIRI(uri + "Class");
-    public static final IRI Literal = createIRI(uri + "Literal");
-    public static final IRI Container = createIRI(uri + "Container");
-    public static final IRI ContainerMembershipProperty = createIRI(uri + "ContainerMembershipProperty");
-    public static final IRI Datatype = createIRI(uri + "Datatype");
+    public static final IRI Resource = createIRI(URI + "Resource");
+    public static final IRI Class = createIRI(URI + "Class");
+    public static final IRI Literal = createIRI(URI + "Literal");
+    public static final IRI Container = createIRI(URI + "Container");
+    public static final IRI ContainerMembershipProperty = createIRI(URI + "ContainerMembershipProperty");
+    public static final IRI Datatype = createIRI(URI + "Datatype");
 
     /* Properties */
-    public static final IRI subClassOf = createIRI(uri + "subClassOf");
-    public static final IRI subPropertyOf = createIRI(uri + "subPropertyOf");
-    public static final IRI comment = createIRI(uri + "comment");
-    public static final IRI label = createIRI(uri + "label");
-    public static final IRI domain = createIRI(uri + "domain");
-    public static final IRI range = createIRI(uri + "range");
-    public static final IRI seeAlso = createIRI(uri + "seeAlso");
-    public static final IRI isDefinedBy = createIRI(uri + "isDefinedBy");
-    public static final IRI member = createIRI(uri + "member");
+    public static final IRI subClassOf = createIRI(URI + "subClassOf");
+    public static final IRI subPropertyOf = createIRI(URI + "subPropertyOf");
+    public static final IRI comment = createIRI(URI + "comment");
+    public static final IRI label = createIRI(URI + "label");
+    public static final IRI domain = createIRI(URI + "domain");
+    public static final IRI range = createIRI(URI + "range");
+    public static final IRI seeAlso = createIRI(URI + "seeAlso");
+    public static final IRI isDefinedBy = createIRI(URI + "isDefinedBy");
+    public static final IRI member = createIRI(URI + "member");
 
     private RDFS() {
         super();

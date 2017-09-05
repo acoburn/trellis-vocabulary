@@ -36,14 +36,11 @@ public final class Trellis extends BaseVocabulary {
     public static final IRI multipartUploadService = createIRI(URI + "multipartUploadService");
 
     /* Named Individuals */
-    public static final IRI AccessViolation = createIRI(URI + "AccessViolation");
     public static final IRI AnonymousUser = createIRI(URI + "AnonymousUser");
     public static final IRI DefaultInteractionModel = createIRI(URI + "DefaultInteractionModel");
-    public static final IRI InvalidInteractionModel = createIRI(URI + "InvalidInteractionModel");
     public static final IRI InvalidType = createIRI(URI + "InvalidType");
     public static final IRI InvalidRange = createIRI(URI + "InvalidRange");
     public static final IRI InvalidCardinality = createIRI(URI + "InvalidCardinality");
-    public static final IRI InvalidPayloadSize = createIRI(URI + "InvalidPayloadSize");
     public static final IRI InvalidProperty = createIRI(URI + "InvalidProperty");
     public static final IRI PreferAccessControl = createIRI(URI + "PreferAccessControl");
     public static final IRI PreferAudit = createIRI(URI + "PreferAudit");

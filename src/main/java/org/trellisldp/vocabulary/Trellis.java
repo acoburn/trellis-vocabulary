@@ -37,7 +37,6 @@ public final class Trellis extends BaseVocabulary {
 
     /* Named Individuals */
     public static final IRI AnonymousUser = createIRI(URI + "AnonymousUser");
-    public static final IRI DefaultInteractionModel = createIRI(URI + "DefaultInteractionModel");
     public static final IRI InvalidType = createIRI(URI + "InvalidType");
     public static final IRI InvalidRange = createIRI(URI + "InvalidRange");
     public static final IRI InvalidCardinality = createIRI(URI + "InvalidCardinality");

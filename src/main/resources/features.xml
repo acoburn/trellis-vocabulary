@@ -5,6 +5,8 @@
 
     <bundle dependency="true">mvn:org.apache.commons/commons-rdf-api/${commonsRdfVersion}</bundle>
 
+    <bundle dependency="true">mvn:org.apache.aries.spifly/org.apache.aries.spifly.dynamic.bundle/${spiflyVersion}</bundle>
+
     <bundle>mvn:org.trellisldp/trellis-vocabulary/${project.version}</bundle>
   </feature>
 </features>

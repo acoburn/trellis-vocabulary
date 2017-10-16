@@ -17,8 +17,8 @@ import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.toSet;
 import static org.apache.jena.graph.Factory.createDefaultGraph;
 import static org.apache.jena.graph.Node.ANY;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import java.util.Objects;
@@ -31,7 +31,7 @@ import org.apache.jena.graph.Graph;
 import org.apache.jena.graph.Node;
 import org.apache.jena.graph.Triple;
 import org.apache.jena.riot.RDFParser;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 
 /**
@@ -66,8 +66,8 @@ public abstract class AbstractVocabularyTest {
 
         fields().forEach(field -> {
             if (isStrict()) {
-                assertTrue("Field definition is not in published ontology! " + field,
-                        subjects.contains(namespace() + field));
+                assertTrue(subjects.contains(namespace() + field),
+                        "Field definition is not in published ontology! " + field);
             } else if (!subjects.contains(namespace() + field)) {
                 LOGGER.warn("Field definition is not in published ontology! {}", field);
             }
@@ -80,7 +80,7 @@ public abstract class AbstractVocabularyTest {
 
         final Set<String> subjects = fields().map(namespace()::concat).collect(toSet());
 
-        assertTrue("Unable to extract field definitions!", subjects.size() > 0);
+        assertTrue(subjects.size() > 0, "Unable to extract field definitions!");
 
         graph.find(ANY, ANY, ANY).mapWith(Triple::getSubject).filterKeep(Node::isURI).mapWith(Node::getURI)
                 .filterKeep(Objects::nonNull)
@@ -95,8 +95,8 @@ public abstract class AbstractVocabularyTest {
         final Optional<Field> uri = stream(vocabulary().getFields()).filter(field -> field.getName().equals("URI"))
                 .findFirst();
 
-        assertTrue(vocabulary().getName() + " does not contain a 'URI' field!", uri.isPresent());
-        assertEquals("Namespaces do not match!", namespace(), uri.get().get(null));
+        assertTrue(uri.isPresent(), vocabulary().getName() + " does not contain a 'URI' field!");
+        assertEquals(namespace(), uri.get().get(null), "Namespaces do not match!");
     }
 
     private Stream<String> fields() {

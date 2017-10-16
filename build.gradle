@@ -33,7 +33,7 @@ ext {
     commonsRdfVersion = '0.3.0-incubating'
 
     /* Testing */
-    junitVersion = '4.12'
+    junitVersion = '4.12.1'
     mockitoVersion = '2.11.0'
     jenaVersion = '3.4.0'
     xercesVersion = '2.11.0'
@@ -52,9 +52,9 @@ configurations {
 dependencies {
     api group: 'org.apache.commons', name: 'commons-rdf-api', version: commonsRdfVersion
 
-    testImplementation group: 'junit', name: 'junit', version: junitVersion
     testImplementation group: 'org.apache.commons', name: 'commons-rdf-jena', version: commonsRdfVersion
     testImplementation group: 'org.apache.jena', name: 'jena-osgi', version: jenaVersion
+    testImplementation group: 'org.junit.vintage', name: 'junit-vintage-engine', version: junitVersion
     testImplementation group: 'org.mockito', name: 'mockito-core', version: mockitoVersion
     testImplementation group: 'xerces', name: 'xercesImpl', version: xercesVersion
 

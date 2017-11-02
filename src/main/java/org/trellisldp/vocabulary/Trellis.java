@@ -46,7 +46,6 @@ public final class Trellis extends BaseVocabulary {
     public static final IRI PreferServerManaged = createIRI(URI + "PreferServerManaged");
     public static final IRI PreferUserManaged = createIRI(URI + "PreferUserManaged");
     public static final IRI RepositoryAdministrator = createIRI(URI + "RepositoryAdministrator");
-    public static final IRI UnsupportedRecursiveDelete = createIRI(URI + "UnsupportedRecursiveDelete");
 
     private Trellis() {
         super();

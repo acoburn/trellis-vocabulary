@@ -10,7 +10,7 @@ RDF vocabularies used by a trellis repository
 
 ## Vocabularies
 
-The following vocabularies are defined in this package
+The following vocabularies are defined in this package:
 
   * `ACL`: [Web Access Control](https://www.w3.org/wiki/WebAccessControl) (W3C)
   * `AS`: [Activity Streams](https://www.w3.org/TR/activitystreams-vocabulary/) (W3C)

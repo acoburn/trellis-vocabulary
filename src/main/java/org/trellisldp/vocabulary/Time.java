@@ -127,4 +127,8 @@ public final class Time extends BaseVocabulary {
     public static final IRI Thursday = createIRI(URI + "Thursday");
     public static final IRI Tuesday = createIRI(URI + "Tuesday");
     public static final IRI Wednesday = createIRI(URI + "Wednesday");
+
+    private Time() {
+        super();
+    }
 }

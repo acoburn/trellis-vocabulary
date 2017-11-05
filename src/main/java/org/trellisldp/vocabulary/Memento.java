@@ -39,4 +39,8 @@ public final class Memento extends BaseVocabulary {
     public static final IRI timegate = createIRI(URI + "timegate");
     public static final IRI timemap = createIRI(URI + "timemap");
     public static final IRI original = createIRI(URI + "original");
+
+    private Memento() {
+        super();
+    }
 }

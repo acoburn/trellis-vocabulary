@@ -79,6 +79,10 @@ gradle.projectsEvaluated {
     }
 }
 
+test {
+    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+}
+
 release {
     tagTemplate = '$name-$version'
 

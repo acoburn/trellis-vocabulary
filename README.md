@@ -16,7 +16,6 @@ The following vocabularies are defined in this package:
   * `AS`: [Activity Streams](https://www.w3.org/TR/activitystreams-vocabulary/) (W3C)
   * `DC`: [DCMI Metadata Terms](http://dublincore.org/documents/dcmi-terms/) (DCMI)
   * `FOAF`: [Friend of a Friend](http://xmlns.com/foaf/spec/)
-  * `IANA`: [Link Relations Vocabulary](https://www.iana.org/assignments/link-relations/link-relations.xhtml) (IANA)
   * `JSONLD`: [The JSON-LD Vocabulary](https://www.w3.org/ns/json-ld) (W3C)
   * `LDP`: [Linked Data Platform](https://www.w3.org/ns/ldp) (W3C)
   * `Memento`: [Time-Based Access to Resources](https://tools.ietf.org/html/rfc7089)

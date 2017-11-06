@@ -54,7 +54,7 @@ public abstract class AbstractVocabularyTest {
         return true;
     }
 
-    private static Graph getVocabulary(final String url) {
+    protected Graph getVocabulary(final String url) {
         final Graph graph = createDefaultGraph();
         RDFParser.source(url).httpAccept(ACCEPT).parse(graph);
         return graph;

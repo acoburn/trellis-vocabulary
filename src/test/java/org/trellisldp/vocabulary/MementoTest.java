@@ -14,49 +14,32 @@
 package org.trellisldp.vocabulary;
 
 import static org.apache.jena.graph.Factory.createDefaultGraph;
-import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
 import org.apache.jena.graph.Graph;
 import org.apache.jena.riot.RDFParser;
 
 /**
+ * Test the Memento Vocabulary Class
  * @author acoburn
  */
-public class ASTest extends AbstractVocabularyTest {
+public class MementoTest extends AbstractVocabularyTest {
 
+    @Override
     public String namespace() {
-        return "https://www.w3.org/ns/activitystreams#";
-    }
-
-    public Class vocabulary() {
-        return AS.class;
+        return "http://mementoweb.org/ns#";
     }
 
     @Override
     protected Graph getVocabulary(final String url) {
         final Graph graph = createDefaultGraph();
-        RDFParser.source(url).httpAccept("application/ld+json").parse(graph);
+        // TODO - once the Memento vocabulary supports conneg, this will be
+        // unnecessary
+        RDFParser.source("http://mementoweb.org/ns.jsonld").parse(graph);
         return graph;
     }
 
-    @Test
     @Override
-    public void testVocabularyRev() {
-        assertEquals(namespace() + "Create", AS.Create.getIRIString());
-        assertEquals(namespace() + "Delete", AS.Delete.getIRIString());
-        assertEquals(namespace() + "Update", AS.Update.getIRIString());
-    }
-
-    @Test
-    @Override
-    public void testVocabulary() {
-        assertEquals(namespace() + "Activity", AS.Activity.getIRIString());
-    }
-
-    @Test
-    public void checkUri() {
-        getVocabulary(namespace());
-        assertEquals(namespace(), AS.URI);
+    public Class vocabulary() {
+        return Memento.class;
     }
 }

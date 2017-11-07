@@ -32,8 +32,7 @@ public class MementoTest extends AbstractVocabularyTest {
     @Override
     protected Graph getVocabulary(final String url) {
         final Graph graph = createDefaultGraph();
-        // TODO - once the Memento vocabulary supports conneg, this will be
-        // unnecessary
+        // TODO - once the Memento vocabulary supports conneg, this will be unnecessary
         RDFParser.source("http://mementoweb.org/ns.jsonld").parse(graph);
         return graph;
     }

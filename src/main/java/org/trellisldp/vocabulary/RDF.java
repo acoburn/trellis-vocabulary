@@ -39,7 +39,6 @@ public final class RDF extends BaseVocabulary {
     /* Datatypes */
     public static final IRI XMLLiteral = createIRI(URI + "XMLLiteral");
     public static final IRI HTML = createIRI(URI + "HTML");
-    public static final IRI PlainLiteral = createIRI(URI + "PlainLiteral");
     public static final IRI langString = createIRI(URI + "langString");
 
     /* List */

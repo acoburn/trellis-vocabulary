@@ -30,11 +30,12 @@ public final class ACL extends BaseVocabulary {
     /* Classes */
     public static final IRI Access = createIRI(URI + "Access");
     public static final IRI Append = createIRI(URI + "Append");
+    public static final IRI AuthenticatedAgent = createIRI(URI + "AuthenticatedAgent");
     public static final IRI Authorization = createIRI(URI + "Authorization");
     public static final IRI Control = createIRI(URI + "Control");
     public static final IRI Read = createIRI(URI + "Read");
+    public static final IRI Origin = createIRI(URI + "Origin");
     public static final IRI Write = createIRI(URI + "Write");
-    public static final IRI AuthenticatedAgent = createIRI(URI + "AuthenticatedAgent");
 
     /* Properties */
     public static final IRI accessControl = createIRI(URI + "accessControl");
